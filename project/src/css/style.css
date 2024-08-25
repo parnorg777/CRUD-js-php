@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #ffa500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#create-post-btn {
+  background-color: #4577d4;
+  font-size: 1.03em;
+}
+
+#create-post-btn:hover {
+  background-color: #3f6ec5;
+}
+
+.btn-redact {
+  background-color: forestgreen;
+}
+.btn-redact:hover {
+  background-color: #1e791e;
+}
+
+.btn-delete {
+  background-color: crimson;
+}
+.btn-delete:hover {
+  background-color: #c21336;
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  width: 75%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+tr {
+  border-bottom: 2px #c5c5c5 solid;
+}
+tbody tr:last-child {
+  border: none;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 5px;
+}
+
+.modal-win {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.267);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window {
+  width: 500px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#form-modal-win {
+  display: none;
+}
+
+h2 {
+  text-align: center;
+}
+
+.window p {
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  font-size: 1.05em;
+  border: 2px solid #adadad;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border: 2px solid #4577d4;
+}
+
+.inp-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-error {
+  color: red;
+  font-size: 0.8em;
+}
+
+#form-tags {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tag-box {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+#add-post-btn {
+  background-color: #4577d4;
+  font-size: 1.02em;
+}
+#add-post-btn:hover {
+  background-color: #3f6ec5;
+}
+
+#post-modal-win {
+  display: none;
+}
+
+span {
+  font-weight: normal;
+}
+
+.tag {
+  background-color: #4577d4;
+  color: white;
+  border-radius: 5px;
+  padding: 0px 5px;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin: 1px;
+}
+
+.btn-close-win {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.01em;
+  background-color: rgba(0, 0, 0, 0.123);
+}
+.btn-close-win:hover {
+  background-color: rgba(0, 0, 0, 0.233);
+}
+
+#pagination {
+  margin-top: auto;
+  margin-bottom: 40px;
+}
+
+#pagination ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+#pagination li {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-active {
+  background-color: white;
+}
+
+.active {
+  border-radius: 5px;
+  background-color: #4577d4;
+  color: white;
+}

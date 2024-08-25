@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image" href="images/12959492.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>CRUD</title>
+  </head>
+  <body>
+    <div class="modal-win" id="form-modal-win">
+      <div class="window">
+        <button class="btn-close-win">
+          <img src="images/cross.svg" width="10px" />
+        </button>
+
+        <form action="#" method="Post">
+          <h2>Форма добавления поста</h2>
+          <input type="text" name="id" hidden />
+          <div class="inp-box">
+            <p>Заголовок поста</p>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              data-required="true"
+              data-min-length="2"
+              data-max-length="20"
+            />
+          </div>
+          <div class="inp-box">
+            <p>Текст поста</p>
+            <textarea
+              id="text"
+              name="text"
+              data-required="true"
+              data-min-length="10"
+              data-max-length="50"
+            ></textarea>
+          </div>
+          <div class="inp-box">
+            <p>Количесвтво лайков</p>
+            <input
+              type="number"
+              id="likes"
+              name="likes"
+              data-required="true"
+              data-max-length="6"
+              data-positive-num="true"
+            />
+          </div>
+
+          <p>Категории</p>
+          <select name="category" id="category">
+            <!-- <option value="1">База</option>
+            <option value="2">Антибаза</option> -->
+          </select>
+
+          <p>Тэги</p>
+          <div id="form-tags">
+            <!-- <div class="tag-box">
+              <p>Собаки</p>
+              <input type="checkbox" value="1" name="tags" />
+            </div>
+            <div class="tag-box">
+              <p>Коты</p>
+              <input type="checkbox" value="2" name="tags" />
+            </div>
+            <div class="tag-box">
+              <p>Путешествия</p>
+              <input type="checkbox" value="3" name="tags" />
+            </div>
+            <div class="tag-box">
+              <p>Статьи</p>
+              <input type="checkbox" value="4" name="tags" />
+            </div> -->
+          </div>
+
+          <button class="btn" id="add-post-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-win" id="post-modal-win">
+      <div class="window">
+        <button class="btn-close-win close-win">
+          <img src="images/cross.svg" width="10px" />
+        </button>
+        <h2 id="post-title">Пост ???</h2>
+        <p>ID поста: <span id="post-id">???</span></p>
+        <p>
+          Текст поста: <br />
+          <span id="post-text">???</span>
+        </p>
+        <p>Количесвтво лайков: <span id="post-likes">???</span></p>
+        <p>Категория: <span id="post-category">???</span></p>
+        <p>
+          Тэги:
+          <span id="post-tags">
+            <!-- <span class="tag">Коты</span>
+            <span class="tag">Путешествия</span>
+            <span class="tag">Собаки</span> -->
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <header>
+      <button class="btn" id="create-post-btn">Добавить пост</button>
+    </header>
+
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Заголовок</th>
+            <th>Лайки</th>
+            <th>Категория</th>
+            <th>Редактировать</th>
+            <th>Удалить</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>11</td>
+            <td><a href="" class="post-links">Пост 4</a></td>
+            <td>43</td>
+            <td>База</td>
+            <td><button class="btn btn-redact">Редакт.</button></td>
+            <td><button class="btn btn-delete">Удалить</button></td>
+          </tr>
+          <tr>
+            <td>32</td>
+            <td><a href="" class="post-links">Пост 7</a></td>
+            <td>43</td>
+            <td>База</td>
+            <td><button class="btn btn-redact">Редакт.</button></td>
+            <td><button class="btn btn-delete">Удалить</button></td>
+          </tr>
+          <tr>
+            <td>34</td>
+            <td><a href="" class="post-links">Пост 10</a></td>
+            <td>43</td>
+            <td>Антибаза</td>
+            <td><button class="btn btn-redact">Редакт.</button></td>
+            <td><button class="btn btn-delete">Удалить</button></td>
+          </tr> -->
+        </tbody>
+      </table>
+
+      <div id="pagination">
+        <ul>
+          <!-- <li class="no-active">1</li>
+          <li class="no-active">2</li>
+          <li class="no-active">3</li>
+          <li class="no-active">4</li>
+          <li class="no-active">5</li> -->
+        </ul>
+      </div>
+    </main>
+
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
